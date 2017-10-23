@@ -35,10 +35,13 @@ namespace FileEditor
         /// </summary>
         public override void CreateTestFile()
         {
-                using (// Open file for writing here)
+            using (StreamWriter file = new StreamWriter($@"{Environment.CurrentDirectory}\test.txt", false))
+            {
+                for (int i = 0; i < 6; i++)
                 {
-                    // Loop and write to file
+                    file.WriteLine(i);
                 }
+            }
         }
 
         /// <summary>
@@ -58,13 +61,17 @@ namespace FileEditor
         /// <returns></returns>
         public override void ReadTestData()
         {
-            using (// Open file for reading here)
+            using (StreamReader fileRead = new StreamReader($@"{Environment.CurrentDirectory}\test.txt"))
             {
                 numbers.Clear();
                 string line;
-                while (// While there are lines in the file)
+                while ((line = fileRead.ReadLine()) != null)
                 {
-                    // Parse the text from the line into a number and add it to "numbers"
+                    int number;
+                    if (Int32.TryParse(line.Trim(), out number))
+                    {
+                        numbers.Add(number);
+                    }
                 }
             }
         }
@@ -87,10 +94,10 @@ namespace FileEditor
         /// <returns></returns>
         public override void AppendTestData(int number)
         {
-            using (// Open file for writing here)
+            using (StreamWriter file = new StreamWriter($@"{Environment.CurrentDirectory}\test.txt", true))
             {
                 Console.WriteLine($"Appending the number {number} to the data set.");
-                // Write the number parameter to the end of the file here
+                file.Write(number);
             }
             Console.WriteLine();
         }
