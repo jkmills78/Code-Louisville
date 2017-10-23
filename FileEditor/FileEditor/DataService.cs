@@ -31,7 +31,7 @@ namespace FileEditor
         /// Additional Notes:
         /// The class you use to write will be disposable, so you should wrap your code in a using block.
         /// You can modify this method as much as needed,
-        /// but it has laready been started for you to help get you started.
+        /// but it has already been started for you to help get you started.
         /// </summary>
         public override void CreateTestFile()
         {
@@ -56,7 +56,7 @@ namespace FileEditor
         /// The class you use to read will be disposable, so you should wrap your code in a using block.
         /// The "numbers" variable has already been created for you.
         /// You can modify this method as much as needed,
-        /// but it has laready been started for you to help get you started.
+        /// but it has already been started for you to help get you started.
         /// </summary>
         /// <returns></returns>
         public override void ReadTestData()
@@ -88,7 +88,7 @@ namespace FileEditor
         /// The class you use to write will be disposable, so you should wrap your code in a using block.
         /// The "numbers" variable has already been created for you.
         /// You can modify this method as much as needed,
-        /// but it has laready been started for you to help get you started.
+        /// but it has already been started for you to help get you started.
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
