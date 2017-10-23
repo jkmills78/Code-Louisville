@@ -96,7 +96,7 @@ namespace FileEditor
         }
 
         /// <summary>
-        /// CHALLENGE:
+        /// BONUS CHALLENGE:
         /// Convert the file to VALID and WELL-FORMED XML
         /// You can use the following URL to http://xmlgrid.net/validator.html to validate
         /// 
